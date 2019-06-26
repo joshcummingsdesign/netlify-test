@@ -9,7 +9,7 @@
     "cypress": "cypress open",
     "start:ci": "http-server build -c-1 --silent -P",
     "e2e": "yarn build && start-server-and-test start:ci 8080 'cypress run'",
-    "run:ci": "yarn audit && yarn add cypress@3.3.1 && yarn build && yarn test --watchAll=false --passWithNoTests",
+    "run:ci": "yarn audit && yarn add cypress@3.3.1 && yarn build && CI=1 yarn test --passWithNoTests",
     "predeploy": "yarn run:ci && start-server-and-test start:ci 8080 'cypress run --record'"
   },
   "dependencies": {
