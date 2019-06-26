@@ -9,8 +9,8 @@
     "cypress": "cypress open",
     "start:ci": "http-server build -c-1 --silent",
     "e2e": "yarn build && start-server-and-test start:ci 8080 'cypress run'",
-    "run:ci": "react-scripts test --watchAll=false --passWithNoTests && cypress run --record",
-    "predeploy": "yarn audit && yarn build && start-server-and-test start:ci 8080 run:ci"
+    "run:ci": "yarn test --watchAll=false --passWithNoTests && cypress run --record",
+    "predeploy": "yarn build && yarn add cypress@3.3.1 && start-server-and-test start:ci 8080 run:ci"
   },
   "dependencies": {
     "react": "^16.8.6",

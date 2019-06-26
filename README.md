@@ -15,3 +15,7 @@ An example repo for React, Cypress, and Netlify.
 Add the following environment variables to Netlify:
 
     CYPRESS_RECORD_KEY=<record key>
+
+Use the following build command in Netlify:
+
+    yarn audit && yarn predeploy
