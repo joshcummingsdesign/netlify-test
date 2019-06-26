@@ -7,8 +7,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "cypress": "cypress open",
+    "audit": "retire -n -p",
     "start:ci": "http-server build -c-1 --silent",
-    "run:ci": "retire -n -p && react-scripts test --watchAll=false --passWithNoTests && cypress run",
+    "run:ci": "yarn audit && yarn test && cypress run",
     "e2e": "yarn build && start-server-and-test start:ci 8080 run:ci"
   },
   "dependencies": {
