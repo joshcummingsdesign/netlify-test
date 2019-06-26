@@ -10,7 +10,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "e2e": "yarn build && start-server-and-test 'http-server build -c-1 --silent' 8080 cy:run",
-    "predeploy": "yarn check; yarn test; yarn e2e"
+    "predeploy": "yarn check && yarn test && yarn e2e"
   },
   "dependencies": {
     "react": "^16.8.6",
