@@ -12,6 +12,9 @@ An example project with React, Cypress, and Netlify.
 1. yarn start
 1. yarn cypress
 
+## End-To-End Testing
+Before deploying, you will want to run `yarn e2e` to see how your tests do against an optimized production build.
+
 ## Deploy
 
 Set up the [Cypress Dashbaord](https://www.cypress.io/dashboard/).
