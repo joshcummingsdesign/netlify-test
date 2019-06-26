@@ -5,12 +5,12 @@
   "scripts": {
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
+    "check": "retire -n -p",
     "test": "react-scripts test",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "start:ci": "http-server build -c-1 --silent",
-    "e2e": "start-server-and-test start:ci 8080 cy:run",
-    "predeploy": "CI=1 npm i cypress; npm run e2e"
+    "e2e": "yarn build && start-server-and-test 'http-server build -c-1 --silent' 8080 cy:run",
+    "predeploy": "yarn check; yarn test; yarn e2e"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -20,6 +20,7 @@
     "cypress": "^3.3.1",
     "http-server": "^0.11.1",
     "react-scripts": "3.0.1",
+    "retire": "^1.6.3",
     "start-server-and-test": "^1.9.1"
   },
   "eslintConfig": {
