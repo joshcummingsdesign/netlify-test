@@ -12,6 +12,10 @@ An example repo for React, Cypress, and Netlify.
 
 ## Deploy
 
+Set up the [Cypress Dashbaord](https://www.cypress.io/dashboard/).
+
+Replace the `projectId` in `cypress.json`.
+
 Add the following environment variables to Netlify:
 
     CYPRESS_RECORD_KEY=<record key>
