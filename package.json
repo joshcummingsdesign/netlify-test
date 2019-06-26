@@ -5,14 +5,11 @@
   "scripts": {
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
-    "check": "retire -n -p",
     "test": "react-scripts test",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cypress": "cypress open",
     "start:ci": "http-server build -c-1 --silent",
-    "e2e": "yarn build && start-server-and-test start:ci 8080 cy:run",
-    "predeploy": "yarn check && yarn test && yarn cy:run",
-    "deploy": "yarn build && start-server-and-test start:ci 8080 predeploy"
+    "run:ci": "retire -n -p && react-scripts test --watchAll=false --passWithNoTests && cypress run",
+    "e2e": "yarn build && start-server-and-test start:ci 8080 run:ci"
   },
   "dependencies": {
     "react": "^16.8.6",
