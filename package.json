@@ -12,9 +12,10 @@
     "start:ci": "http-server build -c-1 --silent",
     "e2e:run": "yarn build && start-server-and-test start:ci 8080 cy:run",
     "e2e:record": "yarn build && start-server-and-test start:ci 8080 cy:record",
-    "predeploy": "yarn audit && yarn test && yarn add cypress@3.3.1 && yarn e2e:record"
+    "predeploy": "yarn audit && yarn test && yarn build"
   },
   "dependencies": {
+    "jquery": "2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
