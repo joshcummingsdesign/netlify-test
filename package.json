@@ -10,7 +10,7 @@
     "start:ci": "http-server build -c-1 --silent",
     "run:ci": "retire -n -p && react-scripts test --watchAll=false --passWithNoTests && cypress run",
     "e2e": "yarn build && start-server-and-test start:ci 8080 run:ci",
-    "predeploy": "CI=1 npm i cypress; npm run e2e"
+    "predeploy": "yarn add cypress@3.3.1 && yarn e2e"
   },
   "dependencies": {
     "react": "^16.8.6",
