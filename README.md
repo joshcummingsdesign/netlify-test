@@ -1,7 +1,7 @@
 # Netlify Test
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0113244a-f83d-46aa-bedd-e8a39eb20d70/deploy-status)](https://app.netlify.com/sites/jcd/deploys)
 
-An example repo for React, Cypress, and Netlify.
+An example project with React, Cypress, and Netlify.
 
 ## Requirements
 - Yarn ^1.15.2
