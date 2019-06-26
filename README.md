@@ -18,4 +18,4 @@ Add the following environment variables to Netlify:
 
 Use the following build command in Netlify:
 
-    yarn audit && yarn predeploy
+    yarn predeploy
