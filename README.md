@@ -9,3 +9,9 @@ An example repo for React, Cypress, and Netlify.
 1. yarn install
 1. yarn start
 1. yarn cypress
+
+## Deploy
+
+Add the following environment variables to Netlify:
+
+    CYPRESS_RECORD_KEY=<record key>
