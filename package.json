@@ -7,11 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "cypress": "cypress open",
-    "cy:run": "cypress run",
-    "cy:record": "cypress run --record",
     "start:ci": "http-server build -c-1 --silent",
-    "e2e:run": "yarn build && start-server-and-test start:ci 8080 cy:run",
-    "e2e:record": "yarn build && start-server-and-test start:ci 8080 cy:record",
+    "e2e": "yarn build && start-server-and-test start:ci 8080 'cypress run'",
     "predeploy": "yarn audit && yarn test && yarn build"
   },
   "dependencies": {
